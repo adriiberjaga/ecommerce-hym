@@ -5,7 +5,7 @@ export default function HomeSection() {
     return(
         <>
          <Rebajas/>
-         <p>HOMEEEEEE</p>
+         <p className={styles.title}>HOMEEEEEE</p>
         </>
 
     )
