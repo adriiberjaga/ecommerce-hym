@@ -1,0 +1,54 @@
+:root {
+  /* Colores principales */
+  --primary-color: #2c3e50;
+  --secondary-color: #e67e22;
+  --accent-color: #e74c3c;
+  --title-color: #E50010;
+  --buton-color: #000000;
+  /* Colores de fondo */
+  --background-primary: #ffffff;
+  --background-secondary: #f8f9fa;
+  --background-tertiary: #f1f3f5;
+  
+  /* Colores de texto */
+  --text-primary: #2c3e50;
+  --text-secondary: #595959;
+  --text-light: #7f8c8d;
+  
+  /* Colores de estado */
+  --success-color: #2ecc71;
+  --warning-color: #f1c40f;
+  --error-color: #e74c3c;
+  
+  /* Bordes y sombras */
+  --border-color: #e0e0e0;
+  --border-radius: 4px;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="dark"] {
+  /* Colores principales en modo oscuro */
+  --primary-color: #3498db;
+  --secondary-color: #f39c12;
+  --accent-color: #e74c3c;
+  --title-color: #ff0011;
+  --buton-color: #ffffff;
+  /* Fondos en modo oscuro */
+  --background-primary: #1a1a1a;
+  --background-secondary: #2d2d2d;
+  --background-tertiary: #333333;
+  
+  /* Textos en modo oscuro */
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --text-light: #808080;
+  
+  /* Estados en modo oscuro */
+  --success-color: #27ae60;
+  --warning-color: #f39c12;
+  --error-color: #c0392b;
+  
+  /* Bordes y sombras en modo oscuro */
+  --border-color: #404040;
+  --box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
