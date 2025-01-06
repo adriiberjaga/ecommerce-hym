@@ -1,17 +1,20 @@
 import { NavLink} from "react-router-dom";
-import { DarkMode } from "./DarkMode";
+// import { DarkMode } from "./DarkMode";
 import styles from "./Header.module.css";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import sidebar from "../assets/sidebar-svg.png";
 
-export default function Header({
-  isDark,
-  setIsDark,
-}: {
-  isDark: boolean;
-  setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
-}) {
+export default function Header(
+//   {
+//   isDark,              DARKMODE
+//   setIsDark,
+// }: {
+//   isDark: boolean;
+//   setIsDark: React.Dispatch<React.SetStateAction<boolean>>;
+// }
+
+){
 
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const desplegarNavbar = () => {
@@ -67,12 +70,13 @@ export default function Header({
           Beauty
         </NavLink>
       </nav>
-      <div className={styles.darkmode}>
+      {/* <div className={styles.darkmode}> DARKMODE
         <DarkMode
           isChecked={isDark}
           handleChange={(e) => setIsDark(e.target.checked)}
         />
-      </div>
+      </div> */} 
+      
     </header>
     <div 
       className={`${styles.overlay} ${isSidebarOpen ? styles.open : ''}`}

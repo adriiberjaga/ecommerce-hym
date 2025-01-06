@@ -1,16 +1,16 @@
-import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import { Outlet } from 'react-router-dom';
+import { ScrollToTop } from './components/ScrollToTop';
 
 
 function App() {
 
-const [isDark, setIsDark] = useState(false);
 
   return (
-    <div className="App" data-theme={isDark ? 'dark' : 'light'}>
-      <Header isDark={isDark} setIsDark={setIsDark} />
+    <div className="App" >
+      <ScrollToTop />
+      <Header />
       <Outlet />
     </div>
   ); 

@@ -21,6 +21,7 @@
   color: var(--buton-color);
   margin-right: 10px;
   cursor: pointer;
+  margin: 0 40px;
 }
 .imageSidebar{
   width: 20px;
@@ -41,7 +42,7 @@
     transition: color 0.3s;
 }
 .logo{
-    margin-left: 100px;
+    margin-left: 60px;
 }
 .logoImg{
     width: 90px;
@@ -51,8 +52,7 @@
 .active{
     color: var(--primary-color);
     border-bottom: var(--primary-color) 2px solid;
-    transform: translateY(-4px); 
-    transition: all 500ms ease;
+    font-weight: 700;
   }
 /*sidebar*/
 .sidebar {
@@ -135,6 +135,12 @@
     padding: 0.5rem 0;
   }
   /*media query*/
+@media screen and (max-width: 900px){
+  .buttonSidebar{
+    margin: 0px;
+  }
+}
+
 
 @media screen and (max-width: 768px){
     .header{
@@ -161,7 +167,7 @@
         margin: 16px;
     }
     .logo{
-        margin-left: 40px;
+        margin-left: 20px;
     }
     .darkmode{
         margin-right: 40px;
@@ -175,6 +181,9 @@
       }
       .imageSidebar{
         margin-right: 10px;
+      }
+      .sidebar {
+        width: 100%;
       }
     
 }
