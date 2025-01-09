@@ -1,3 +1,14 @@
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Silkscreen&display=swap');
+
+.josefinSansUniquifier {
+  font-family: "Josefin Sans", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
 :root {
   /* Colores principales */
   --primary-color: #2c3e50;

@@ -110,7 +110,9 @@ export default function Header(
       <div className={styles.sidebarInfo}>
         <h3>Información Adicional</h3>
         <ul>
-          <li>Contacto</li>
+          <li>
+            <NavLink onClick={() => setIsSidebarOpen(false)} to={"contacto"}>Contacto</NavLink>
+            </li>
           <li>Sobre Nosotros</li>
           <li>Ayuda</li>
         </ul>

@@ -1,0 +1,32 @@
+
+@media (max-width: 1200px){
+    .carruselContainer{
+        /* height: 400px; */
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1400px){
+    .carruselContainer{
+        /* height: 400px; */
+        margin-bottom: -100px;
+    }
+}
+@media (max-width: 1000px){
+    .carruselContainer{
+        /* height: 400px; */
+        margin-bottom: -130px;
+    }
+}
+@media (max-width: 870px){
+    .carruselContainer{
+        /* height: 400px; */
+        margin-bottom: -160px;
+    }
+}
+@media (max-width: 723px){
+    .carruselContainer{
+        /* height: 400px; */
+        margin-bottom: -190px;
+    }
+}

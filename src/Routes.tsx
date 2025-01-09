@@ -6,7 +6,8 @@ import NotFound from "./components/NotFound";
 import MenSection from "./pages/MenSection";
 import KidsSection from "./pages/KidsSection";
 import BeautySection from "./pages/BeautySection";
-
+import Contactsection from "./pages/Contactsection"
+import ProductDetail from "./components/ProductDetail";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -33,6 +34,23 @@ const router = createBrowserRouter([
                 path: 'beauty',
                 element: <BeautySection />,
             },
+            {
+                path: 'contacto',
+                element: <Contactsection />,
+            },
+            {
+                path: 'men/product/:id',
+                element: <ProductDetail />,
+              },
+              {
+                path: 'women/product/:id',
+                element: <ProductDetail />,
+              },
+              {
+                path: 'product/:id',
+                element: <ProductDetail />,
+              }
+              
         ]
 
     }
