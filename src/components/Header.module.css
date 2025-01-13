@@ -35,6 +35,17 @@
     margin-left: auto;
     margin-right: 100px;
 }
+.cart{
+  border: transparent;
+  background-color: transparent;
+  margin-left: auto;
+  margin-right: 100px;
+  color: black;
+  cursor: pointer;
+}
+.cartImg{
+  width: 25px;
+}
 .navLinkClass{
     font-size: 1.2rem;
     text-decoration: none;
@@ -186,6 +197,12 @@
       .sidebar {
         width: 100%;
       }
+      .cart{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 40px;
+      }
     
 }
 @media screen and (max-width: 480px){
@@ -194,5 +211,8 @@
     }	
     .imageSidebar{
       margin-right: 2px;
+    }
+    .cartImg{
+      width: 20px;
     }
 }

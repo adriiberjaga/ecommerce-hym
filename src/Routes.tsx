@@ -8,6 +8,7 @@ import KidsSection from "./pages/KidsSection";
 import BeautySection from "./pages/BeautySection";
 import Contactsection from "./pages/Contactsection"
 import ProductDetail from "./components/ProductDetail";
+import Cart from "./components/Cart";
 const router = createBrowserRouter([
     {
         path: "/",
@@ -39,6 +40,10 @@ const router = createBrowserRouter([
                 element: <Contactsection />,
             },
             {
+                path: 'cart',
+                element: <Cart />,
+            },
+            {
                 path: 'men/product/:id',
                 element: <ProductDetail />,
               },
@@ -47,7 +52,7 @@ const router = createBrowserRouter([
                 element: <ProductDetail />,
               },
               {
-                path: 'product/:id',
+                path: 'home/product/:id',
                 element: <ProductDetail />,
               }
               

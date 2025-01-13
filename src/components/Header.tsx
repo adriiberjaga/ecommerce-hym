@@ -4,7 +4,7 @@ import styles from "./Header.module.css";
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import sidebar from "../assets/sidebar-svg.png";
-
+import cesta from "../assets/icon-cesta.png"
 export default function Header(
 //   {
 //   isDark,              DARKMODE
@@ -76,6 +76,16 @@ export default function Header(
           handleChange={(e) => setIsDark(e.target.checked)}
         />
       </div> */} 
+      <NavLink
+      className={styles.cart}
+      to={"cart"}
+      >
+      <div>
+      <img className={styles.cartImg} src={cesta} alt="carrito de compras" />
+
+      </div>
+      </NavLink>
+       
       
     </header>
     <div 

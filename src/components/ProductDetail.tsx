@@ -13,13 +13,13 @@ import foto6 from '../assets/imagesHome/6.jpg'
 import foto7 from '../assets/imagesHome/7.jpg'
 
 const localProducts = [
-  { id: 111, name: "Sofá de Esquina", image: foto1, price: 799.99, description: 'Sofá de esquina moderno y cómodo, ideal para salas de estar amplias.', title: 'Sofá de Esquina', category: 'Sala de estar' },
-  { id: 112, name: "Mesa de Comedor", image: foto2, price: 599.99, description: 'Mesa de comedor de madera robusta con espacio para seis personas.', title: 'Mesa de Comedor', category: 'Comedor' },
-  { id: 113, name: "Cama King Size", image: foto3, price: 129.99, description: 'Cama king size con cabecera tapizada y estructura de madera sólida.', title: 'Silla de Oficina', category: 'Oficina' },
-  { id: 114, name: "Cama King Size", image: foto4, price: 899.99, description: 'Cama king size con cabecera tapizada y estructura de madera sólida.', title: 'Cama King Size', category: 'Dormitorio' },
-  { id: 115, name: "Mesa de Centro", image: foto5, price: 149.99, description: 'Mesa de centro minimalista con diseño moderno y acabados en vidrio.', title: 'Mesa de Centro', category: 'Sala de estar' },
-  { id: 116, name: "Estantería Modular", image: foto6, price: 199.99, description: 'Estantería modular con múltiples compartimentos para almacenamiento.', title: 'Estantería Modular', category: 'Almacenamiento' },
-  { id: 117, name: "Lámpara de Pie", image: foto7, price: 89.99, description: 'Lámpara de pie elegante con luz regulable y diseño contemporáneo.', title: 'Lámpara de Pie', category: 'Iluminación' },
+  { id: 111, name: "Planta Decorativa", image: foto1, price: 29.99, description: 'Planta decorativa en maceta negra para añadir frescura a cualquier espacio.', title: 'Planta Decorativa', category: 'Decoración' },
+  { id: 112, name: "Comedor moderno", image: foto2, price: 2249.99, description: 'Comedor moderno acogedor con cojines y una mesa rústica.', title: 'Rincón de Lectura', category: 'Sala de estar' },
+  { id: 113, name: "Cama king size", image: foto3, price: 999.99, description: 'Cama king size moderna con estantes flotantes.', title: 'Cama king size', category: 'Habitación' },
+  { id: 114, name: "Zona de Estudio Infantil", image: foto4, price: 799.99, description: 'Espacio infantil con escritorio, silla y decoración temática.', title: 'Cama Matrimonial', category: 'Dormitorio' },
+  { id: 115, name: "Rincón de Lectura", image: foto5, price: 549.99, description: 'Rincón de Lectura tapizado con estilo contemporáneo.', title: 'Zona de Estudio Infantil', category: 'Habitación infantil' },
+  { id: 116, name: "Rincón de Lectura", image: foto6, price: 299.99, description: 'Rincón de lectura tapizado con estilo contemporáneo.', title: 'Sillón de Lectura', category: 'Sala de estar' },
+  { id: 117, name: "Mesa Auxiliar de Madera", image: foto7, price: 99.99, description: 'Mesa auxiliar redonda con acabado en madera natural.', title: 'Mesa Auxiliar de Madera', category: 'Mobiliario' },
 ];
 
 
@@ -53,10 +53,19 @@ const ProductDetail: React.FC = () => {
   if (loading) return <p>Loading... <span className="spinner">⏳</span></p>;
   if (!product) return <p>Producto no encontrado</p>;
 
+  function addToCart() {
+    const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+    const updatedCart = [...cart, product];
+    localStorage.setItem('cart', JSON.stringify(updatedCart));
+    alert(`${product?.title} ha sido añadido a la cesta.`);
+  }
+
   return (
     <div className={styles.detailContainer}>
       <button 
-        onClick={() => navigate(-1)}
+        onClick={() => {
+          navigate(-1);
+        }}
         className={styles.backButton}
       >
         ← Volver
@@ -68,6 +77,9 @@ const ProductDetail: React.FC = () => {
           <p className={styles.price}>${product.price}</p>
           <p className={styles.category}>Categoría: {product.category}</p>
           <p className={styles.description}>{product.description}</p>
+          <button onClick={() => {
+          addToCart();
+        }} className={styles.buyBtn}>Añadir a la cesta</button>
         </div>
       </div>
     </div>

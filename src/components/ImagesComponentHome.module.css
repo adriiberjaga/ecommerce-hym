@@ -34,8 +34,7 @@
 
   object-fit: cover;
   object-position: center;
-  image-rendering: -webkit-optimize-contrast; /* Para Chrome/Safari */
-  image-rendering: crisp-edges; /* Para Firefox */
+  image-rendering: -webkit-optimize-contrast; /* Para Chrome/Safari/Edge */
 }
 
 .price {
