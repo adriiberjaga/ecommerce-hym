@@ -1,11 +1,12 @@
 import ApiComponentMen from "../components/ApiComponentMen";
 import CarruselComponent from "../components/CarruselComponent";
 import Rebajas from "../components/Rebajas";
+import men1 from "../assets/imagesCarrusel/men1.webp"
+import men2 from "../assets/imagesCarrusel/men2.jpeg"
 export default function MenSection() {
   const imagenes1 = [
-    'https://picsum.photos/1200/600?random=1',
-    'https://picsum.photos/1200/600?random=2',
-    'https://picsum.photos/1200/600?random=3',
+    men1,
+    men2,
   ];
 
   return (

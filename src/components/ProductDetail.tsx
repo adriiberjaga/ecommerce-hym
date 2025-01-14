@@ -30,6 +30,7 @@ const ProductDetail: React.FC = () => {
   const location = useLocation();
   const [product, setProduct] = useState<ApiResponse | null>(null);
   const [loading, setLoading] = useState(true);
+  const [showMessage, setShowMessage] = useState(false); // Mostrar el mensaje de añadido a la cesta
 
   useEffect(() => {
     const cachedData = localStorage.getItem("products");
@@ -57,9 +58,11 @@ const ProductDetail: React.FC = () => {
     const cart = JSON.parse(localStorage.getItem('cart') || '[]');
     const updatedCart = [...cart, product];
     localStorage.setItem('cart', JSON.stringify(updatedCart));
-    alert(`${product?.title} ha sido añadido a la cesta.`);
   }
-
+  const message = () => {
+    setShowMessage(true);  
+    setTimeout(() => setShowMessage(false), 3000); 
+  };
   return (
     <div className={styles.detailContainer}>
       <button 
@@ -79,7 +82,10 @@ const ProductDetail: React.FC = () => {
           <p className={styles.description}>{product.description}</p>
           <button onClick={() => {
           addToCart();
+          message()
         }} className={styles.buyBtn}>Añadir a la cesta</button>
+              {showMessage && <div className={styles.message}>Producto añadido con éxito</div>}
+
         </div>
       </div>
     </div>

@@ -1,12 +1,13 @@
 import Rebajas from "../components/Rebajas";
 import ApiComponentWomen from "../components/ApiComponentWomen";
 import CarruselComponent from "../components/CarruselComponent";
+import women1 from '../assets/imagesCarrusel/women1.jpeg';
+import women2 from '../assets/imagesCarrusel/women2.jpg';
 
 export default function WomenSection() {
   const imagenes1 = [
-    'https://picsum.photos/1200/600?random=12',
-    'https://picsum.photos/1200/600?random=21',
-    'https://picsum.photos/1200/600?random=32',
+    women1,
+    women2,
   ];
   return (
     <>

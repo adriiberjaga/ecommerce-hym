@@ -42,8 +42,8 @@ export default function CarruselComponent({
             <img
               src={src}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-contain"
-            />
+              className="w-full h-full object-contain md:object-cover"
+              />
           </div>
         ))}
       </div>
