@@ -12,6 +12,8 @@ interface Product {
 }
 
 const Cart: React.FC = () => {
+  const noFinish = true
+
   const [cart, setCart] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -42,8 +44,13 @@ const Cart: React.FC = () => {
     return <p  className={styles.cartContainer}>Tu carrito está vacío.</p>;
   }
 
-  return (
-    <div className={styles.cartContainer}>
+  if (noFinish) {
+    return (
+      <p>Cart in process</p>
+    );
+  } else {
+    return (
+      <div className={styles.cartContainer}>
       <h1>Carrito de Compras</h1>
       {cart.map(product => (
   <div key={product.id} className={styles.cartItem}>
@@ -60,9 +67,10 @@ const Cart: React.FC = () => {
   </div>
 ))}
 
-      <h2>Total: ${totalPrice.toFixed(2)}</h2>
-    </div>
-  );
+        <h2>Total: ${totalPrice.toFixed(2)}</h2>
+      </div>
+    )
+  }
 };
 
 export default Cart;
