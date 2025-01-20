@@ -46,7 +46,7 @@ const Cart: React.FC = () => {
 
   if (noFinish) {
     return (
-      <p>Cart in process</p>
+      <p className={styles.cartContainer}>Cart in process</p>
     );
   } else {
     return (
